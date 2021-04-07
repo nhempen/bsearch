@@ -1,6 +1,6 @@
 $password=$args[0]
-$tgtfile="../passwords-sha1.txt"
-$hashtype="SHA1"
+$tgtfile=$args[1]
+$hashtype=$args[2]
 $stringAsStream = [System.IO.MemoryStream]::new()
 $writer = [System.IO.StreamWriter]::new($stringAsStream)
 $writer.write($password)
