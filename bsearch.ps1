@@ -1,3 +1,4 @@
+#Will search a password hash file downloaded from https://haveibeenpwned.com/Passwords
 $password=$args[0]
 $tgtfile=$args[1]
 $hashtype=$args[2]
