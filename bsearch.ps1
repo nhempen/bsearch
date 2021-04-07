@@ -7,6 +7,7 @@ $writer.write($password)
 $writer.Flush()
 $stringAsStream.Position = 0
 $HASHED=(Get-FileHash -InputStream $stringAsStream -Algorithm $hashtype).Hash
+write-host "------------------------------------------"
 write-host "Searching $tgtfile for $hashtype : $HASHED"
 $results=(Select-String -Path $tgtfile -Pattern $HASHED -List)
 if ($null -eq $results)
